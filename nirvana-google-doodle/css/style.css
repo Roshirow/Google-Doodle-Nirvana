@@ -1,0 +1,208 @@
+/* External styling from: https://codepen.io/manikoth/pen/NNNBYe.css
+ */
+html{
+  height:600px;
+}
+/* Doodle Stage */
+#stage {
+  color:rgb(255, 255, 0);
+  background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1882231/thAABNY7DY.jpg);
+  /*fixed sizes*/
+  height: 250px;
+  width: 500px;
+  position:relative;
+  overflow:hidden;
+}
+#stage:hover #wings img{
+  top:10px;
+}
+#stage #wings img{
+  z-index:10;
+  left:30%;
+  top:250px;
+  position:absolute;
+  transition:1s;
+	width:30%;
+}
+#stage #smiles img{
+	z-index:10;
+	position:absolute;
+	width:100%;
+	top:-20px;
+	opacity:0.4;
+	-webkit-animation:flash 1s 7s;
+	        animation:flash 1s 7s;
+}
+#stage #music img{
+	z-index:40;
+	width:10%;
+	left:-30px;
+	top:120px;
+	position:absolute;
+	-webkit-animation:pulse 5s ease-in infinite;
+	        animation:pulse 5s ease-in infinite;
+}
+#stage #music img{
+	-webkit-animation-name:move;
+	        animation-name:move;
+	-webkit-animation-duration:3.5s;
+	        animation-duration:3.5s;
+	-webkit-animation-delay:2s;
+	        animation-delay:2s;
+}
+@-webkit-keyframes move{
+	0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:0;}
+	50%{opacity:0;}
+	100%{-webkit-transform:translateX(550px);transform:translateX(550px);opacity:10;}
+}
+@keyframes move{
+	0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:0;}
+	50%{opacity:0;}
+	100%{-webkit-transform:translateX(550px);transform:translateX(550px);opacity:10;}
+}
+#stage #notes img{
+	z-index:40;
+	width:10%;
+	left:-30px;
+	top:120px;
+	position:absolute;
+	-webkit-animation:pulse 5s ease-in infinite;
+	        animation:pulse 5s ease-in infinite;
+}
+#stage #notes img{
+	-webkit-animation-name:slide;
+	        animation-name:slide;
+	-webkit-animation-duration:3.5s;
+	        animation-duration:3.5s;
+	-webkit-animation-delay:3s;
+	        animation-delay:3s;
+}
+@-webkit-keyframes slide{
+	0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:0;}
+	50%{opacity:0;}
+	100%{-webkit-transform:translateX(550px);transform:translateX(550px);opacity:10;}
+}
+@keyframes slide{
+	0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:0;}
+	50%{opacity:0;}
+	100%{-webkit-transform:translateX(550px);transform:translateX(550px);opacity:10;}
+}
+/*GOOGLE TEXT*/
+#doodle {
+	position: absolute;
+	z-index:10;
+	top: 30%;
+	left: 50%;
+	width: 70%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+#doodle path{
+	stroke: #fcee21;
+	fill: black;
+	stroke-dasharray: 400;
+	opacity: 10;
+	-webkit-animation: animate 5s cubic-bezier(0, 0.23, 1, 0.1);
+	        animation: animate 5s cubic-bezier(0, 0.23, 1, 0.1);
+}
+/*GOOGLE ANIMATION*/
+@-webkit-keyframes animate {
+	0% {
+		opacity: 0;
+		fill: none;
+		stroke-dashoffset: 400;
+	}
+	30% {
+		opacity: 10;
+		fill: none;
+		stroke-dashoffset: 400;
+	}
+	90% {
+		fill: rgba(252, 238, 33, 0);
+	}
+	100% {
+		opacity: 10;
+		fill: rgba(252, 238, 33, 1);
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes animate {
+	0% {
+		opacity: 0;
+		fill: none;
+		stroke-dashoffset: 400;
+	}
+	30% {
+		opacity: 10;
+		fill: none;
+		stroke-dashoffset: 400;
+	}
+	90% {
+		fill: rgba(252, 238, 33, 0);
+	}
+	100% {
+		opacity: 10;
+		fill: rgba(252, 238, 33, 1);
+		stroke-dashoffset: 0;
+	}
+}
+/*GUITAR STYLES*/
+#guitar{
+	position:absolute;
+	z-index:30;
+	top: -60px;
+	left:40%;
+	width:20%;
+	-webkit-animation:strum 2s 1s;
+	        animation:strum 2s 1s;
+	-webkit-animation-fill-mode:forwards;
+	        animation-fill-mode:forwards;
+}
+
+/*GUITAR ANIMATION*/
+@-webkit-keyframes strum {
+	
+	0% {
+		-webkit-transform:translateY(0);
+		        transform:translateY(0);
+	}
+	
+	100% {
+		-webkit-transform:translateY(250px);
+		        transform:translateY(250px);
+	}
+	
+}
+@keyframes strum {
+	
+	0% {
+		-webkit-transform:translateY(0);
+		        transform:translateY(0);
+	}
+	
+	100% {
+		-webkit-transform:translateY(250px);
+		        transform:translateY(250px);
+	}
+	
+}
+	
+	/*FRONT VIEW COBAIN*/
+#frontview{
+	position: absolute;
+	z-index:20;
+	top: 50.4%;
+	left:40%;
+	width: 13.5%;
+	-webkit-animation:center 3s 1s;
+	        animation:center 3s 1s;
+}
+/*ANIMATIONS*/
+@-webkit-keyframes center{
+		0%{opacity:0;}
+	100%{opacity:10;}
+}
+@keyframes center{
+		0%{opacity:0;}
+	100%{opacity:10;}
+}
